@@ -19,11 +19,13 @@
 
 <script>
 import Rating from "./Rating";
+import SearchFilter from "./SearchFilter";
 
 export default {
   name: "UsersList",
   components: {
-    Rating
+    Rating,
+    SearchFilter
   },
   props: {
     users: Array,

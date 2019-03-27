@@ -3,8 +3,8 @@
     <font-awesome-icon
       icon="star"
       class="star rating__item"
-      v-for="(star, key) in stars"
-      :key="key"
+      v-for="(star, index) in stars"
+      :key="index"
     />
     <font-awesome-icon
       icon="star"
