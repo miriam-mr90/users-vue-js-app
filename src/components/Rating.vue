@@ -3,25 +3,32 @@
     <font-awesome-icon
       icon="star"
       class="star rating__item"
-      v-for="(star, index) in stars"
-      :key="index"
-    />
-    <font-awesome-icon
-      icon="star"
-      class="star rating__item rating__item--empty"
-      v-for="(star, index) in (5 - stars)"
-      :key="index"
+      v-for="star in starsArray"
+      :class="{ 'rating__item--empty': star.empty }"
+      :key="star.id"
     />
   </div>
 </template>
 
 <script>
+// JS library to use range function
+import range from "lodash/range";
+
 export default {
   name: "Rating",
   props: {
     stars: Number
   },
-  methods: {}
+  computed: {
+    starsArray() {
+      return range(5).map(index => {
+        return {
+          id: index,
+          empty: this.stars <= index
+        };
+      });
+    }
+  }
 };
 </script>
 
@@ -31,10 +38,10 @@ $this: ".rating";
 #{$this} {
   &__item {
     color: #F7D034;
-  }
 
-  &__item--empty {
-    color: #E3E3E4;
+    &--empty {
+      color: #E3E3E4;
+    }
   }
 }
 </style>
