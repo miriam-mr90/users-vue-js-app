@@ -1,7 +1,12 @@
 <template>
   <div id="app">
+    <user-preview
+      :user="activeUser"
+      v-if="activeUser != null"
+      v-on:select-user="updateSelectedUser"
+    />
+    <h3>Users</h3>
     <search-filter :search-text="searchText" v-on:search="search"/>
-    <user-preview :user="activeUser" v-if="activeUser != null"/>
     <users-list
       :users="usersFiltered"
       :active-user="activeUser"
@@ -68,6 +73,15 @@ body {
   padding-top: 30px;
 }
 
+h3 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 input {
   min-height: 36px;
   padding: 4px 12px;
@@ -90,10 +104,45 @@ input {
   }
 }
 
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
 .card {
   background-color: #FFF;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(18, 42, 68, 0.2);
   transition: box-shadow 300ms;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 4px;
+  background: #00B6C8;
+  color: #FFF;
+  font-size: 14px;
+  cursor: pointer;
+
+  &__ico {
+    margin-left: 8px;
+  }
 }
 </style>

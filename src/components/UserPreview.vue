@@ -1,12 +1,15 @@
 <template>
-  <div class="user-preview">
+  <div class="user-preview" :id="'id-' + user.id">
+    <button class="btn user-preview__close" v-on:click="$emit('select-user', null)">Close
+      <font-awesome-icon icon="times" class="btn__ico"/>
+    </button>
     <img :src="user.img" :alt="user.name" class="user-preview__image">
     <h2 class="user-preview__title">{{ user.name }}</h2>
     <rating :stars="user.rating" class="user-preview__rating"/>
     <ul class="user-preview__likes">
       <li class="like" v-for="(like, key) in user.likes" :key="key">{{ like }}</li>
     </ul>
-    <p class="user-preview__quote">{{ user.quote }}</p>
+    <q class="user-preview__quote">{{ user.quote }}</q>
   </div>
 </template>
 
@@ -32,10 +35,13 @@ $this: ".user-preview";
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 30px;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #EBECEC;
 
-  ul {
-    list-style-type: none;
-    padding: 0;
+  &__close {
+    margin-left: auto;
+    margin-bottom: 20px;
   }
 
   &__image {

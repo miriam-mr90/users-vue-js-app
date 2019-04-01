@@ -1,6 +1,5 @@
 <template>
   <div class="users-list">
-    <h3>Users</h3>
     <ul class="users-list__list">
       <li
         class="users-list__item card"
@@ -46,11 +45,12 @@ $this: ".users-list";
     padding: 20px 24px;
     display: flex;
     align-items: center;
-    transition: all 300ms ease-in;
+    transition: all 400ms linear;
     cursor: pointer;
 
     &:hover {
-      color: #8181D0;
+      color: #00B6C8;
+      //background-color: #00B6C8;
     }
 
     &:not(:first-child) {
@@ -58,8 +58,8 @@ $this: ".users-list";
     }
 
     &.active {
-      color: #8181D0;
-      background-color: #EFF0FA;
+      color: #FFF;
+      background-color: #00B6C8;
     }
   }
 
