@@ -37,7 +37,6 @@ $this: ".user-preview";
   align-items: center;
   padding-bottom: 30px;
   margin-bottom: 10px;
-  border-bottom: 2px dashed #EBECEC;
 
   &__close {
     margin-left: auto;

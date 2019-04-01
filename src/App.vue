@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <user-preview
-      :user="activeUser"
-      v-if="activeUser != null"
-      v-on:select-user="updateSelectedUser"
-    />
-    <h3>Users</h3>
-    <search-filter :search-text="searchText" v-on:search="search"/>
-    <users-list
-      :users="usersFiltered"
-      :active-user="activeUser"
-      v-on:select-user="updateSelectedUser"
-    />
+    <div class="aside" v-bind:class="{ 'aside--expanded': activeUser === null }">
+      <h3>Users</h3>
+      <search-filter :search-text="searchText" v-on:search="search"/>
+      <users-list
+        :users="usersFiltered"
+        :active-user="activeUser"
+        v-on:select-user="updateSelectedUser"
+      />
+    </div>
+    <div class="main">
+      <user-preview
+        :user="activeUser"
+        v-if="activeUser != null"
+        v-on:select-user="updateSelectedUser"
+      />
+    </div>
   </div>
 </template>
 
@@ -65,9 +69,9 @@ body {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   color: #4e5357;
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
   width: 80vw;
-  max-width: 620px;
+  //max-width: 620px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 30px;
@@ -122,6 +126,26 @@ button {
     border: 0;
     padding: 0;
   }
+}
+
+.aside {
+  width: 40%;
+  transition: width 300ms linear;
+
+  &--expanded {
+    min-width: max-content;
+    width: 100%;
+
+    & + .main {
+      width: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.main {
+  width: 60%;
+  padding-left: 30px;
 }
 
 .card {

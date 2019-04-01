@@ -65,6 +65,7 @@ $this: ".users-list";
 
   &__name {
     font-weight: bold;
+    margin-right: 12px;
   }
 
   &__image {
