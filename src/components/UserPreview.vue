@@ -6,7 +6,7 @@
     <ul class="user-preview__likes">
       <li class="like" v-for="(like, key) in user.likes" :key="key">{{ like }}</li>
     </ul>
-    <p class="user-preview__description">{{ user.description }}</p>
+    <p class="user-preview__quote">{{ user.quote }}</p>
   </div>
 </template>
 
@@ -56,7 +56,7 @@ $this: ".user-preview";
     margin-bottom: 10px;
   }
 
-  &__description {
+  &__quote {
     text-align: center;
   }
 

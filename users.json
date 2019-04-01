@@ -5,7 +5,7 @@
       "rating": 3,
       "status": "online",
       "img": "http://www.fillmurray.com/200/200",
-      "description": "Gluten­free cray cardigan vegan. Lumbersexual pork belly blog, fanny pack put a bird on it selvage",
+      "quote": "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do.",
       "likes": ["Dogs", "Sushi", "Chopin", "Tacos"],
       "dislikes": ["Birds", "Red things", "Danish food", "Dead Batteries"],
       "social media": [
@@ -17,13 +17,29 @@
       ]
     },
     {
+      "name": "Andy Radack",
+      "rating": 4,
+      "status": "online",
+      "img": "http://www.fillmurray.com/200/203",
+      "quote": "I can’t give you a sure-fire formula for success, but I can give you a formula for failure: try to please everybody all the time.",
+      "likes": ["Birds", "Hip-Hop", "Dancing", "Chess"],
+      "dislikes": ["Grapes", "Football", "Swimming", "Shopping"],
+      "social media": [
+        {
+          "instagram": "Andy_Radack_",
+          "twitter": "Andy_Radack_",
+          "facebook": "Andy_Radack_"
+        }
+      ]
+    },
+    {
       "name": "Frank Wang",
       "rating": 5,
       "status": "online",
       "img": "http://www.fillmurray.com/200/201",
-      "description": "Before errors, mails were only pressures. This is not to discredit the idea that a magic is the prose of anelizabeth. This could be, or perhaps some posit the outmost coil to be less than dedal. Some assert that those treatments are nothing more than carp.",
+      "quote": "A friend is one that knows you as you are, understands where you have been, accepts what you have become, and still, gently allows you to grow.",
       "likes": ["Frank", "Travelling", "Football", "Cooking"],
-      "dislikes": ["Dogs", "Walks on the beach", "Chopin", "Tacos"],
+      "dislikes": ["Dogs", "Walks on the beach", "Mozart", "Tacos"],
       "social media": [
         {
           "instagram": "Frank_Wang_",
@@ -37,7 +53,7 @@
       "rating": 5,
       "status": "offline",
       "img": "http://www.fillmurray.com/200/202",
-      "description": "Aaah! Natural light! Get it off me! Get it off me! Oh, loneliness and cheeseburgers are a dangerous mix. D'oh. Here's to alcohol, the cause of all life's problems.",
+      "quote": "Happiness doesn't come from doing what we like to do but from liking what we have to do.",
       "likes": ["Cats", "The beach", "Chopin", "Blue things"],
       "dislikes": ["Birds"],
       "social media": [
@@ -53,7 +69,7 @@
       "rating": 2,
       "status": "online",
       "img": "http://www.fillmurray.com/200/204",
-      "description": "Facts are meaningless. You could use facts to prove anything that's even remotely true! I prefer a vehicle that doesn't hurt Mother Earth. It's a go­cart, powered by my ownsense of self­satisfaction. You don't win friends with salad.",
+      "quote": "You can never cross the ocean until you have the courage to lose sight of the shore.",
       "likes": ["Movies", "Cooking", "Spain", "Yoga"],
       "dislikes": ["Not talking spanish", "Chopin"],
       "social media": [
@@ -69,7 +85,7 @@
       "rating": 4,
       "status": "offline",
       "img": "http://www.fillmurray.com/200/206",
-      "description": "Gluten­free cray cardigan vegan. Lumbersexual pork belly blog, fanny pack put a bird on it selvage",
+      "quote": "The only person you are destined to become is the person you decide to be.",
       "likes": ["Horses", "Swimming", "Mozart", "Pizza"],
       "dislikes": ["Birds", "Red things", "Danish food", "Dead Batteries"],
       "social media": [
@@ -77,6 +93,22 @@
           "instagram": "Fuad_Rashid_",
           "twitter": "Fuad_Rashid_",
           "facebook": "Fuad_Rashid_"
+        }
+      ]
+    },
+    {
+      "name": "Tom Kinyon",
+      "rating": 1,
+      "status": "offline",
+      "img": "http://www.fillmurray.com/200/209",
+      "quote": "Time is the coin of your life. It is the only coin you have, and only you can determine how it will be spent. Be careful lest you let other people spend it for you.",
+      "likes": ["Cars", "Jazz", "Sports", "TV"],
+      "dislikes": ["Grey color", "Cats", "Apples", "Winter"],
+      "social media": [
+        {
+          "instagram": "Tom_Kinyon_",
+          "twitter": "Tom_Kinyon_",
+          "facebook": "Tom_Kinyon_"
         }
       ]
     }
