@@ -7,6 +7,8 @@
         placeholder="Search..."
         autocomplete="off"
         class="search__input"
+        v-bind:value="searchText"
+        v-on:input="$emit('search', $event.target.value)"
       >
       <font-awesome-icon icon="search" class="search__icon"/>
     </div>
@@ -16,8 +18,9 @@
 <script>
 export default {
   name: "SearchFilter",
-  components: {},
-  methods: {}
+  props: {
+    searchText: String
+  }
 };
 </script>
 
@@ -26,7 +29,8 @@ $this: ".search";
 
 #{$this} {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
+  margin-bottom: 30px;
 
   &__input-group {
     position: relative;

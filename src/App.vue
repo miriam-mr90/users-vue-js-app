@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <search-filter/>
+    <search-filter :search-text="searchText" v-on:search="search"/>
     <user-preview :user="activeUser" v-if="activeUser != null"/>
-    <users-list :users="users" :active-user="activeUser" v-on:select-user="updateSelectedUser"/>
+    <users-list
+      :users="usersFiltered"
+      :active-user="activeUser"
+      v-on:select-user="updateSelectedUser"
+    />
   </div>
 </template>
 
@@ -24,12 +28,24 @@ export default {
   data() {
     return {
       users: usersData.people,
-      activeUser: null
+      activeUser: null,
+      searchText: null
     };
   },
   methods: {
     updateSelectedUser(user) {
       this.activeUser = user;
+    },
+    search(text) {
+      this.searchText = text.toLowerCase().trim();
+    }
+  },
+  computed: {
+    usersFiltered() {
+      if (!this.searchText) return this.users;
+      return this.users.filter(
+        c => c.name.toLowerCase().indexOf(this.searchText) > -1
+      );
     }
   }
 };
