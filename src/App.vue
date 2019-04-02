@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <div class="aside" v-bind:class="{ 'aside--expanded': activeUser === null }">
+  <div id="app" class="my-app">
+    <div v-if="activeUser === null">
       <h3>Users</h3>
       <search-filter :search-text="searchText" v-on:search="search"/>
       <users-list
@@ -9,13 +9,12 @@
         v-on:select-user="updateSelectedUser"
       />
     </div>
-    <div class="main">
-      <user-preview
-        :user="activeUser"
-        v-if="activeUser != null"
-        v-on:select-user="updateSelectedUser"
-      />
-    </div>
+
+    <user-preview
+      :user="activeUser"
+      v-if="activeUser != null"
+      v-on:select-user="updateSelectedUser"
+    />
   </div>
 </template>
 
@@ -65,18 +64,6 @@ body {
   background: #fafbfc;
 }
 
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  color: #4e5357;
-  display: flex;
-  flex-wrap: nowrap;
-  width: 80vw;
-  //max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 30px;
-}
-
 h3 {
   text-align: center;
 }
@@ -118,9 +105,6 @@ button {
   color: inherit;
   font: inherit;
   line-height: normal;
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
 
   &::-moz-focus-inner {
     border: 0;
@@ -128,31 +112,30 @@ button {
   }
 }
 
-.aside {
-  width: 40%;
-  transition: width 300ms linear;
+.my-app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  color: #4e5357;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 80vw;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 
-  &--expanded {
-    min-width: max-content;
-    width: 100%;
-
-    & + .main {
-      width: 0;
-      padding-left: 0;
-    }
+  & > * {
+    flex-grow: 1;
   }
 }
-
-.main {
-  width: 60%;
-  padding-left: 30px;
-}
-
 .card {
   background-color: #FFF;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(18, 42, 68, 0.2);
   transition: box-shadow 300ms;
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(18, 42, 68, 0.2);
+  }
 }
 
 .btn {
