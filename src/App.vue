@@ -140,16 +140,37 @@ button {
 
 .btn {
   display: flex;
+  position: relative;
   align-items: center;
   padding: 6px 16px;
   border-radius: 4px;
-  background: #00B6C8;
+  border: 1px solid #00B6C8;
   color: #FFF;
   font-size: 14px;
   cursor: pointer;
 
   &__ico {
     margin-left: 8px;
+  }
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: #00B6C8;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    color: #00B6C8;
+
+    &:after {
+      width: 0%;
+    }
   }
 }
 </style>
