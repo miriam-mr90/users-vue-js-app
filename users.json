@@ -1,7 +1,6 @@
 {
   "people": [
     {
-      "id": "andrew-amernante-a1",
       "name": "Andrew Amernante",
       "rating": 3,
       "status": "online",
@@ -18,24 +17,22 @@
       ]
     },
     {
-      "id": "andy-radack-h7",
-      "name": "Andy Radack",
-      "rating": 4,
-      "status": "online",
-      "img": "http://www.fillmurray.com/200/203",
-      "quote": "I can’t give you a sure-fire formula for success, but I can give you a formula for failure: try to please everybody all the time.",
-      "likes": ["Birds", "Hip-Hop", "Dancing", "Chess"],
-      "dislikes": ["Grapes", "Football", "Swimming", "Shopping"],
+      "name": "Tom Kinyon",
+      "rating": 1,
+      "status": "offline",
+      "img": "http://www.fillmurray.com/200/209",
+      "quote": "Time is the coin of your life. It is the only coin you have, and only you can determine how it will be spent. Be careful lest you let other people spend it for you.",
+      "likes": ["Cars", "Jazz", "Sports", "TV"],
+      "dislikes": ["Grey color", "Cats", "Apples", "Winter"],
       "social media": [
         {
-          "instagram": "Andy_Radack_",
-          "twitter": "Andy_Radack_",
-          "facebook": "Andy_Radack_"
+          "instagram": "Tom_Kinyon_",
+          "twitter": "Tom_Kinyon_",
+          "facebook": "Tom_Kinyon_"
         }
       ]
     },
     {
-      "id": "frank-wang-d5",
       "name": "Frank Wang",
       "rating": 5,
       "status": "online",
@@ -52,7 +49,22 @@
       ]
     },
     {
-      "id": "sissi-chen-c9",
+      "name": "Andy Radack",
+      "rating": 4,
+      "status": "online",
+      "img": "http://www.fillmurray.com/200/203",
+      "quote": "I can’t give you a sure-fire formula for success, but I can give you a formula for failure: try to please everybody all the time.",
+      "likes": ["Birds", "Hip-Hop", "Dancing", "Chess"],
+      "dislikes": ["Grapes", "Football", "Swimming", "Shopping"],
+      "social media": [
+        {
+          "instagram": "Andy_Radack_",
+          "twitter": "Andy_Radack_",
+          "facebook": "Andy_Radack_"
+        }
+      ]
+    },
+    {
       "name": "Sissi Chen",
       "rating": 5,
       "status": "offline",
@@ -69,7 +81,6 @@
       ]
     },
     {
-      "id": "diego-garcia-e4",
       "name": "Diego Garcia",
       "rating": 2,
       "status": "online",
@@ -86,7 +97,6 @@
       ]
     },
     {
-      "id": "fuad-rashid-a3",
       "name": "Fuad Rashid",
       "rating": 4,
       "status": "offline",
@@ -99,23 +109,6 @@
           "instagram": "Fuad_Rashid_",
           "twitter": "Fuad_Rashid_",
           "facebook": "Fuad_Rashid_"
-        }
-      ]
-    },
-    {
-      "id": "tom-kinyon-c3",
-      "name": "Tom Kinyon",
-      "rating": 1,
-      "status": "offline",
-      "img": "http://www.fillmurray.com/200/209",
-      "quote": "Time is the coin of your life. It is the only coin you have, and only you can determine how it will be spent. Be careful lest you let other people spend it for you.",
-      "likes": ["Cars", "Jazz", "Sports", "TV"],
-      "dislikes": ["Grey color", "Cats", "Apples", "Winter"],
-      "social media": [
-        {
-          "instagram": "Tom_Kinyon_",
-          "twitter": "Tom_Kinyon_",
-          "facebook": "Tom_Kinyon_"
         }
       ]
     }
